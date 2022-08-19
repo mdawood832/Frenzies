@@ -12,8 +12,11 @@ app.get('/frenzies' , (req, res) => {
     res.render('index.ejs')
 })
 
-
-
+// ABOUT ROUTE 
+app.get('/frenzies/about' , (req,res) => {
+    res.render('about.ejs')
+}
+)
 
 // PORT
 app.listen(PORT, (req,res) => {
