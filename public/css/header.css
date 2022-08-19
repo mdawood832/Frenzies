@@ -9,7 +9,7 @@ body{
 }
 
 h1{ 
-    padding-top:30px ;
+    padding-top:20px ;
     padding-left: 10px ;
     padding-right: 10px;
     font-size: 40px;
@@ -19,15 +19,26 @@ h1{
 
 }
 
+.caption{
+    font-size: 18px;
+    /* text-shadow: none; */
+    text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+    padding-top: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
 .multipleFlowers{
     width: 120px;
+    height: 120px;
     padding-right: 10px ;
 
 }
 
 .singleFlower{
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     padding-top: 20px;
 }
 
