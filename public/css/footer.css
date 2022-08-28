@@ -14,11 +14,18 @@ footer{
     justify-content: center;
 }
 
+.maryam{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    text-shadow: -.25px -.25px 0 white, .25px -.25px 0 white, -.25px .25px 0 white, .25px .25px 0 white;
 
+}
 
 .copyright{
     color: white;
-    font-size: 15px;
+    font-size: 10px;
     text-shadow: -.25px -.25px 0 white, .25px -.25px 0 white, -.25px .25px 0 white, .25px .25px 0 white;
     display: flex;
     justify-content: center;

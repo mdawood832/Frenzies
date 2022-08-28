@@ -63,3 +63,45 @@ a{
     font-weight: bold;
     font-family: Arial Black;
 }
+
+body{
+    color: black;
+}
+
+ul {
+    display: grid;
+    grid-template-columns:60px;
+    grid-template-columns: auto auto auto auto;
+
+}
+
+li{
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 200px;
+    display: grid;
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    font-family: Arial Black;
+    /* flex-wrap: wrap; */
+    /* perspective: 1000px; */
+}
+
+.post-button{
+    display: flex;
+    justify-content: center;
+}
+
+.post-button-button{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-family: Arial Black;
+    width: 100px;
+    height: 50px;
+
+}
