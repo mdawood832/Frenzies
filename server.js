@@ -1,5 +1,4 @@
 // require("dotenv").config()
-// 
 const express = require('express')
 const app = express()
 const PORT  = 3000
@@ -25,7 +24,7 @@ mongoose.connection.once('open', ()=> {
 app.use('/public', express.static('public'));
 app.use(express.static('public'))
 app.use(express.json())
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:true}))
 
 
 // goes to router '/frenzies' plus whatever routes are inside the controller 
