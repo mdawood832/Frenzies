@@ -39,12 +39,12 @@ app.get('/frenzies/seed', (req, res) => {
 	Quote.create(
 		[
 			{
-				title: 'Curiosity killed the cat',
+				title: 'Curios cat',
 				author: 'Ben Jonson',
                 body: 'Curiosity killed the cat, but satisfaction brought it back.'
 			},
 			{
-				title: 'It is good to love many things',
+				title: 'VINCENT',
 				author: 'Vincent van Gogh',
                 body: 'It is good to love many things, for therein lies the true strength, and whosoever loves much performs much, and can accomplish much, and what is done in love is well done.'
 			},
@@ -121,7 +121,7 @@ app.get('/frenzies/:id/edit', (req, res)=>{
 
 // PUT ROUTE 
 app.put('/frenzies/:id', (req, res)=>{
-    Quote.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
+    Quote.findByIdAndUpdate(req.params.id , req.body ,{new:true} , (err, updatedModel) => {
         // res.send(updatedModel)
         res.redirect('/frenzies')
     })

@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/edit.css">
+    <title>Edit Frenzy</title>
 </head>
+<%- include('./partials/header.ejs') %> 
 <body>
-    <h1>Edit Frenzy</h1>
-    <form action="/frenzies/<%=quote.id%>?_method=PUT" method="POST">
-        Title: <input type="text" name="title" value="<%=quote.title%>"/><br/>
-    	Author: <input type="text" name="author" value="<%=quote.author%>"/><br/>
-        Body: <input type="text" name="author" value="<%=quote.body%>"/><br/>
-        <input type="submit" name="" value="Submit Changes"/>
+    <h2>Edit Frenzy</h2>
+    <form action="/frenzies/<%= quote.id %>?_method=PUT" method="POST">
+        Title: <input type="text" name="title" value="<%=quote.title%>"/>
+
         <br>
-        <button class=""><a href="/frenzies">Back to Home Page </a></button>
+
+    	Author: <input type="text" name="author" value="<%=quote.author%>"/>
+
+        <br>
+
+        Body: <input type="text" name="author" value="<%=quote.body%>"/>
+
+        <br>
+
+        <input type="submit" name="" value="Submit Changes"/>
+
+        <br>
+
     </form>
-</body>
-</html>
+    <button class=""><a href="/frenzies">Back to Home Page </a></button>
+
+<%- include('./partials/footer.ejs') %> 

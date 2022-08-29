@@ -3,7 +3,7 @@ form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 20px;
     font-family: Arial Black;
 }
 
@@ -14,7 +14,7 @@ form{
 }
 
 .title-box{
-  
+    height: 25px ;
 }
 
 .author{
@@ -22,7 +22,8 @@ form{
 }
 
 .author-box{
-   
+    height: 25px ;
+
 }
 
 .quote{
@@ -36,6 +37,8 @@ form{
     font-family: Arial Black;
     font-size: 20px;
     position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .submit:hover{
