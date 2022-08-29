@@ -3,18 +3,30 @@
 <ul>
     
     <% for(let i = 0; i < quotes.length; i++){ %>
-            <li style="list-style:none;">
-            Title: 
-            <a href="/frenzies/<%=quotes[i].id; %>">
+        <li style="list-style:none;">
+            <a class="titleLink" href="/frenzies/<%=quotes[i].id; %>">
             <%=quotes[i].title; %>
             </a>
+
+            <nav class="index-NAV">
+                <!-- DELETE BUTTON -->
+            <form  action="/frenzies/<%=quotes[i].id%>?_method=DELETE" method="POST">
+                <input class="delete-button" type="submit" value="delete">
+            </form>
+            
+                <!-- EDIT BUTTON -->
+            <button class="edit-button">
+                <a class="edit-button" href="/frenzies/<%=quotes[i].id; %>/edit">edit</a>
+            </button>
+
+        </nav>
+
+        </li>
     <% } %>
-    <form action="/frenzies/<%=quotes.id %>?_method=DELETE" method="POST">
-    </li>
+
 
 </ul>
 
-<a class="post-button" href="/frenzies/new"><button class="post-button-button">Post a Frenzy</button></a>
 
 
 <br>

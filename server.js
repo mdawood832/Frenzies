@@ -16,6 +16,7 @@ mongoose.connection.once('open', ()=> {
 });
 
 // MIDDLEWARE
+app.use('/public', express.static('public'));
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
@@ -38,27 +39,31 @@ app.get('/frenzies/seed', (req, res) => {
 	Quote.create(
 		[
 			{
-				title: 'grapefruit',
-				author: 'pink',
-                body: ''
+				title: 'Curiosity killed the cat',
+				author: 'Ben Jonson',
+                body: 'Curiosity killed the cat, but satisfaction brought it back.'
 			},
 			{
-				title: 'grapefruit',
-				author: 'pink',
-                body: ''
+				title: 'It is good to love many things',
+				author: 'Vincent van Gogh',
+                body: 'It is good to love many things, for therein lies the true strength, and whosoever loves much performs much, and can accomplish much, and what is done in love is well done.'
 			},
 			{
-				title: 'grapefruit',
-				author: 'pink',
-                body: ''
-			}
+				title: 'Rain',
+				author: 'Dolly Parton',
+                body: 'The way I see it, if you want the rainbow, you gotta put with the rain'
+			},
+            {
+                title: 'Annoying',
+				author: 'Tyler the Creator',
+                body: 'Im a really, really, smart, multi-talented almost genius, whos very annoying'
+            }
 		],
 		(err, data) => {
 			res.redirect('/frenzies');
 		}
 	);
 });
-
 
 
 // ABOUT ROUTE 
@@ -80,8 +85,8 @@ app.post('/frenzies', (req, res)=>{
         	res.send(error);
         }
         else{
-	        res.send(createdQuote);
-            // res.redirect('/frenzies')
+	        // res.send(createdQuote);
+            res.redirect('/frenzies')
         }
     }
 )});
@@ -98,6 +103,26 @@ app.get('/frenzies/:id', (req, res)=>{
 // DELETE ROUTE 
 app.delete('/frenzies/:id', (req, res)=>{
     Quote.findByIdAndRemove(req.params.id , (err, data) => {
+        res.redirect('/frenzies')
+    })
+})
+
+// EDIT ROUTE 
+app.get('/frenzies/:id/edit', (req, res)=>{
+    Quote.findById(req.params.id, (err, foundQuote)=>{
+        res.render(
+    		'edit.ejs',
+    		{
+    			quote:foundQuote
+    		}
+    	)
+    })
+})
+
+// PUT ROUTE 
+app.put('/frenzies/:id', (req, res)=>{
+    Quote.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
+        // res.send(updatedModel)
         res.redirect('/frenzies')
     })
 })

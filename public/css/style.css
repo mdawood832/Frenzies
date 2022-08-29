@@ -1,0 +1,49 @@
+body{
+    font-family: Arial Black;
+}
+
+.singleFlower{
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding-top:10px ;
+}
+
+.title{
+color: #FF1493;
+display: flex;
+justify-content: center;
+}
+
+.author{
+    display: flex;
+    justify-content: center;
+}
+
+.quote{
+    display: flex;
+    justify-content: center;
+}
+
+.date{
+    display: flex;
+    justify-content: center;
+}
+
+.back-to-home{
+    margin: 10px;
+    font-family: Arial;
+    background-color: white;
+    color: black;
+    text-shadow: none;
+    border-radius: 6px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+

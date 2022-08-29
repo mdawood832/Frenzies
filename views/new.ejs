@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POST</title>
+    <link rel="stylesheet" href="/public/css/post.css">
+    <%- include('./partials/header.ejs') %> 
+
+
 </head>
 <body>
-
-<h1>Post a Frenzy</h1>
     <div class="container">
         <form action="/frenzies" method="POST"> 
-            <label for="title"> Title</label>
-            <input type="text" name="title" id="">
+            <label class="title" for="title"> Title</label>
+            <input class="title-box" type="text" name="title" id="" placeholder="Live, Laugh, Love" maxlength="15">
+
             <br>
-            <label for="author">Author</label>
-            <input type="text" name="author" id="">
+
+            <label class="author" for="author">Author</label>
+            <input class="author-box" type="text" name="author" id="author" placeholder="Bessie Stanley" maxlength="25">
+
             <br>
-            <label for="body">Quote</label>
-            <input type="text" name="body" id="name" placeholder="">
+
+            <label class="quote" for="body">Quote</label>
+            <textarea name="body" id="body" cols="30" rows="8" maxlength="250" placeholder="He has achieved success who has lived well, laughed often, and loved much..."></textarea>
             <br>
-            <input type="submit" value="Post Frenzy">
+            <input class="submit" type="submit" value="POST">
         </form>
     </div>
-
-    <a href="/frenzies"><button>back to Gallery</button></a>
 
 <%- include('./partials/footer.ejs') %> 

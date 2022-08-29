@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Frenzy</title>
-    </head>
-    <body>
-        <h1>Frenzy show page</h1>
-        <nav>
-            <a href="/frenzies">Back to Home Page </a>
-        </nav>
-    </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/style.css" type="text/css">
+</head>
+<%- include('./partials/header.ejs') %> 
+
+<body>
+        <div>
+            <h1 class="title"><%=quote.title%></h1>
+            <h2 class="author">By: <%=quote.author%></h1>
+            <p class="quote">
+                " <%=quote.body%> "
+            </p>
+            <h5 class="date"><%=quote.publishDate%></h5>
+        </div>
+
+        
+        <a class="back-to-home" href="/frenzies">Gallery</a>
+        
+<%- include('./partials/footer.ejs') %> 
+
