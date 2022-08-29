@@ -37,7 +37,7 @@ justify-content: center;
 
 .back-to-home{
     margin: 10px;
-    font-family: Arial;
+    font-family: Arial Black;
     background-color: white;
     color: black;
     text-shadow: none;
@@ -45,5 +45,6 @@ justify-content: center;
     background-color: white;
     display: flex;
     justify-content: center;
+    padding-top: 60px;
 }
 

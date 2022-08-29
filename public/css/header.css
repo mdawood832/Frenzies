@@ -121,7 +121,10 @@ li{
     margin: 10px;
     color: black;
     border-radius: 6px;
-    background-color: #FFC0CB;
+    font-family: Arial;
+    text-shadow: none;
+
+    /* background-color: #FFC0CB; */
 
 
 }
@@ -133,9 +136,18 @@ li{
     color: black;
     text-shadow: none;
     border-radius: 6px;
-    background-color: #FFC0CB;
+    /* background-color: #FFC0CB; */
 
 
+}
+
+.edit-button:hover{
+    color:black;
+
+}
+
+.delete-button:hover{
+    color:black;
 }
 
 .index-NAV{
@@ -157,5 +169,4 @@ li{
 .titleLink:hover{
     color: #FF1493;
     text-shadow: -.25px -.25px 0 #000, .25px -.25px 0 #000, -.25px .25px 0 #000, .25px .25px 0 #000;
-
 }
