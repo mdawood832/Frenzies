@@ -1,19 +1,14 @@
 const express = require('express')
 const router = express.Router()
-const Quote = require('../models/quotes.js') 
+// const Quote = require('../models/quotes.js') 
+const Quote = require('../models/quotes') 
+
 // const db = require('../models' )
 
 // #############################################################
 // ROUTES
 // #############################################################
-// HOME ROUTE 
-router.get('/' , (req,res) => {
-    Quote.find({} , (error, allQuotes) => {
-            res.render('index.ejs' , {
-            quotes: allQuotes
-        })
-    })
-})
+
 
 
 // INDEX ROUTE  

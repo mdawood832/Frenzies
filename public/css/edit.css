@@ -6,3 +6,27 @@ form{
     padding-top: 20px;
     font-family: Arial Black;
 }
+
+h2{
+    display: flex;
+    justify-content: center;
+    font-family: Arial Black;
+}
+
+.submit{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-family: Arial Black;
+
+}
+
+.submit:hover{
+    color: #FF1493;
+    border-color: #FF1493;
+    ;
+}
+
+.body{
+    width: 500px;
+}
