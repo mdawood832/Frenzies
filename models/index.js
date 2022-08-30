@@ -1,13 +1,14 @@
-// const mongoose = require('mongoose')
-// const db = mongoose.connection;
+const dotenv = require("dotenv")
+const mongoose = require("mongoose")
 
-// mongoose
-//     .connect(process.env.MONGODB_URI)
-//     .then(() => {
-//         console.log(`Mongodb connected at ${db.host}:${db.port}`)
-//     })
-//     .catch((err) => console.log(err))
+dotenv.config()
+const mongoString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@maryamscluster.ybkj2jb.mongodb.net/Frenzies?retryWrites=true&w=majority`
+mongoose.connect(mongoString, {useNewUrlParser: true})
 
-// module.exports = {
-//     Post: require('./Post')
-// }
+mongoose.connection.on("error", function(error) {
+  console.log(error)
+})
+
+mongoose.connection.on("open", function() {
+  console.log("Connected to MongoDB database.")
+})

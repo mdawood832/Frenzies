@@ -3,7 +3,7 @@ require("dotenv").config()
 const express = require('express')
 const app = express()
 const PORT  = 3000
-// app.set("view engine" , "ejs")
+app.set("view engine" , "ejs")
 const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
 const {render} = require('ejs')
@@ -16,10 +16,10 @@ const quotesController = require('./controllers/quotes.js')
 const mongoose = require('mongoose');
 
 // MONGOOSE CONNECT 
-mongoose.connect('mongodb://127.0.0.1:27017/basiccrud', { useNewUrlParser: true});
-mongoose.connection.once('open', ()=> {
-    console.log('connected to mongo');
-});
+// mongoose.connect('mongodb://127.0.0.1:27017/basiccrud', { useNewUrlParser: true});
+// mongoose.connection.once('open', ()=> {
+//     console.log('connected to mongo');
+// });
 
 // MIDDLEWARE
 app.use('/public', express.static('public'));
@@ -27,9 +27,25 @@ app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+//attempting a database connection 
+// const uri = process.env.ATLAS_URI;
+// mongoose.connect(uri,{useNewUrlParser:true,useCreateIndex:true});
+// const connection = mongoose.connection
+
+// connection.once('open' , () => {
+//     console.log('connection to database successful')
+// })
+
+
+
 
 // goes to router '/frenzies' plus whatever routes are inside the controller 
 app.use('/frenzies' , quotesController)
+
+// HOME ROUTE 
+app.get('/' , (req,res) => {
+    res.render('index.ejs')
+})
 
 
 
