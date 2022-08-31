@@ -33,11 +33,9 @@ app.use(methodOverride('_method'))
 app.use('/frenzies' , quotesController)
 
 // HOME ROUTE 
-app.get('/' , (req,res) => {
-    res.render('index.ejs')
-})
-
-
+// app.get('/' , (req,res) => {
+//     res.render('index.ejs')
+// })
 
 // #############################################################
 // LISTENING 

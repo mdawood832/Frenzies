@@ -77,9 +77,16 @@ router.get('/:id/edit', (req, res)=>{
 
 // PUT ROUTE 
 router.put('/:id', (req, res)=>{
-    Quote.findByIdAndUpdate(req.params.id , req.body ,{new:true} , (err, updatedModel) => {
-        // res.send(updatedModel)
-        res.redirect('/frenzies')
+    Quote.findByIdAndUpdate(req.params.id ,req.body, (err, updatedModel) => {
+        if(err){
+            res.send(err)
+        }else{
+            
+            // console.log(req.params.id)
+            // console.log(req.body)
+            res.redirect('/frenzies')
+        }
+   
     })
 })
 
