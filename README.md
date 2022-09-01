@@ -1,5 +1,8 @@
-Frenzies is a quote gallery that is based on the submissions of users. Users are able to post quotes to the gallery that make them frenzy! 
+FRENZIES is a quote gallery that is based on the submissions of users. Users are able to post quotes to the gallery that make them frenzy! 
 https://frenzies-deployed-app.herokuapp.com/frenzies
+
+FRENZIES is a full stack application built with Node.js, Mongoose, MongoDB Atlas, Express, and EJS. I adhered to the MVC file structure and created 7
+RESTful routes with full CRUD. I deployed the app usina Herokue. 
 
 <table>
   <tr>
