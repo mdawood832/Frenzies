@@ -15,6 +15,7 @@ https://frenzies-deployed-app.herokuapp.com/frenzies
 
 
 <h1> Gallery/Index Page </h1>
+https://frenzies-deployed-app.herokuapp.com/frenzies
 <h3> Before </h3> 
 <h3> After </h3>
 <p float="left">
@@ -24,15 +25,14 @@ https://frenzies-deployed-app.herokuapp.com/frenzies
 
 
 <h1> Post Page  </h1>
-<h3> Before </h3>
-<h3> After </h3> 
-
+https://frenzies-deployed-app.herokuapp.com/frenzies/new
 <p float="left">
 <img height="300" width="500" alt="Screen Shot 2022-08-20 at 2 24 22 PM" src="https://user-images.githubusercontent.com/101743220/187830953-0b8f0290-4175-4331-9a79-360131748482.png"> 
 <img height="300" width="500" alt="Screen Shot 2022-08-31 at 11 29 58 PM" src="https://user-images.githubusercontent.com/101743220/187831899-91a66f52-269c-4786-b1b8-eba6cc628065.png">
 </p>
 
 <h1> Show Page  </h1>
+https://frenzies-deployed-app.herokuapp.com/frenzies/630eab09981cf4cbc3da9fa4
 <p float="left">
 <img height="300" width="500" alt="Screen Shot 2022-08-31 at 11 27 49 PM" src="https://user-images.githubusercontent.com/101743220/187831581-1503e2e2-d99d-4c1c-8308-f2d5557a659b.png">
 <img height="300" width="500" alt="Screen Shot 2022-08-31 at 11 29 35 PM" src="https://user-images.githubusercontent.com/101743220/187831953-47c98765-65f1-4081-bde3-351e64fe5963.png">
@@ -40,6 +40,7 @@ https://frenzies-deployed-app.herokuapp.com/frenzies
 
 
 <h1> About Page  </h1>
+https://frenzies-deployed-app.herokuapp.com/frenzies/about
 <p float="left">
 <img height="300" width="500" alt="Screen Shot 2022-08-31 at 11 27 59 PM" src="https://user-images.githubusercontent.com/101743220/187831596-0fb681c8-ae55-421d-99a2-c545b3b9a2f8.png">
 <img height="300" width="500" alt="Screen Shot 2022-08-31 at 11 29 46 PM" src="https://user-images.githubusercontent.com/101743220/187832029-0386acf0-64bd-4249-8832-23ae552e3aa7.png">
@@ -113,17 +114,17 @@ Once the user loads the page they land on the Gallery page which is the index pa
 
 <h1> MVP Goals </h1>
 <br>
-Have the app look portfolio ready and professional.
+🌸 Have the app look portfolio ready and professional.
 <br>
-Have the app be able to function properly through all the routes and with the MongoDB.
+🌸 Have the app be able to function properly through all the routes and with the MongoDB.
 
 <h1> Stretch Goals</h1>
 <br>
-Add a comment section to each quote.
+🌸 Add a comment section to each quote.
 <br>
-Add likes or favorites to each quote so people can like.
+🌸 Add likes or favorites to each quote so people can like.
 <br>
-Be able to add photos 
+🌸 Be able to add photos 
 
   
 
