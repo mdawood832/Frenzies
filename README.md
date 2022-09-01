@@ -16,29 +16,32 @@ https://frenzies-deployed-app.herokuapp.com/frenzies
 
 <h1> Gallery/Index Page </h1>
 <h3> Before </h3>
-<img width="1440" alt="Screen Shot 2022-08-20 at 9 30 54 AM" src="https://user-images.githubusercontent.com/101743220/187830988-4fedcdb8-80f7-4f8f-8f53-a5c54f9952e2.png">
+<img width="500" alt="Screen Shot 2022-08-20 at 9 30 54 AM" src="https://user-images.githubusercontent.com/101743220/187830988-4fedcdb8-80f7-4f8f-8f53-a5c54f9952e2.png">
 <h3> After </h3>
-<img width="1438" alt="Screen Shot 2022-08-31 at 11 29 18 PM" src="https://user-images.githubusercontent.com/101743220/187831774-8a49f4a8-2371-4d2b-b60f-16d78bf3a585.png">
+<img width="500" alt="Screen Shot 2022-08-31 at 11 29 18 PM" src="https://user-images.githubusercontent.com/101743220/187831774-8a49f4a8-2371-4d2b-b60f-16d78bf3a585.png">
 
 
 <h1> Post Page  </h1>
 <h3> Before </h3>
-<img width="933" alt="Screen Shot 2022-08-20 at 2 24 22 PM" src="https://user-images.githubusercontent.com/101743220/187830953-0b8f0290-4175-4331-9a79-360131748482.png">
-<h3> After </h3>
-<img width="1439" alt="Screen Shot 2022-08-31 at 11 29 58 PM" src="https://user-images.githubusercontent.com/101743220/187831899-91a66f52-269c-4786-b1b8-eba6cc628065.png">
+<h3> After </h3> 
+
+<p float="left">
+<img width="500" alt="Screen Shot 2022-08-20 at 2 24 22 PM" src="https://user-images.githubusercontent.com/101743220/187830953-0b8f0290-4175-4331-9a79-360131748482.png"> 
+<img width="500" alt="Screen Shot 2022-08-31 at 11 29 58 PM" src="https://user-images.githubusercontent.com/101743220/187831899-91a66f52-269c-4786-b1b8-eba6cc628065.png">
+</p>
 
 <h1> Show Page  </h1>
 <h3> Before </h3>
-<img width="785" alt="Screen Shot 2022-08-31 at 11 27 49 PM" src="https://user-images.githubusercontent.com/101743220/187831581-1503e2e2-d99d-4c1c-8308-f2d5557a659b.png">
+<img width="500" alt="Screen Shot 2022-08-31 at 11 27 49 PM" src="https://user-images.githubusercontent.com/101743220/187831581-1503e2e2-d99d-4c1c-8308-f2d5557a659b.png">
 <h3> After </h3>
-<img width="1440" alt="Screen Shot 2022-08-31 at 11 29 35 PM" src="https://user-images.githubusercontent.com/101743220/187831953-47c98765-65f1-4081-bde3-351e64fe5963.png">
+<img width="500" alt="Screen Shot 2022-08-31 at 11 29 35 PM" src="https://user-images.githubusercontent.com/101743220/187831953-47c98765-65f1-4081-bde3-351e64fe5963.png">
 
 
 <h1> About Page  </h1>
 <h3> Before </h3>
-<img width="783" alt="Screen Shot 2022-08-31 at 11 27 59 PM" src="https://user-images.githubusercontent.com/101743220/187831596-0fb681c8-ae55-421d-99a2-c545b3b9a2f8.png">
+<img width="500" alt="Screen Shot 2022-08-31 at 11 27 59 PM" src="https://user-images.githubusercontent.com/101743220/187831596-0fb681c8-ae55-421d-99a2-c545b3b9a2f8.png">
 <h3> After </h3>
-<img width="1437" alt="Screen Shot 2022-08-31 at 11 29 46 PM" src="https://user-images.githubusercontent.com/101743220/187832029-0386acf0-64bd-4249-8832-23ae552e3aa7.png">
+<img width="500" alt="Screen Shot 2022-08-31 at 11 29 46 PM" src="https://user-images.githubusercontent.com/101743220/187832029-0386acf0-64bd-4249-8832-23ae552e3aa7.png">
 
 
 <h1> RESTful Routes </h1>
