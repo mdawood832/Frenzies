@@ -2,7 +2,7 @@ require("dotenv").config()
 
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5001;
 app.set("view engine" , "ejs")
 const methodOverride = require('method-override')
 // app.use(methodOverride('_method'))
@@ -12,11 +12,13 @@ const {render} = require('ejs')
 const quotesController = require('./controllers/quotes.js')
 
 
+
 // MONGOOSE 
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
 
 // MONGOOSE CONNECT 
-mongoose.connect( process.env.MONGODB_URI, { useNewUrlParser: true});
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
 mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
