@@ -27,22 +27,16 @@ mongoose.set('strictQuery', false);
 
 // MONGOOSE CONNECT 
 // mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
-mongoose.connect(process.env.MONGO_URI, {
+
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    tls: true,
-    tlsAllowInvalidCertificates: false,
-    tlsAllowInvalidHostnames: false,
-    ssl: true,
-    sslValidate: true,
-    connectTimeoutMS: 30000
+    serverSelectionTimeoutMS: 15000,  // Increase timeout to 15 seconds
   })
-  .then(() => console.log('✅ Connected to MongoDB with TLS 1.2'))
-  .catch(err => console.error('❌ MongoDB connection error:', err));
+    .then(() => console.log('✅ Connected to MongoDB with TLS 1.2'))
+    .catch((err) => console.error('❌ MongoDB connection error:', err))
   
-mongoose.connection.once('open', ()=> {
-    console.log('connected to mongo');
-});
+
 
 // MIDDLEWARE
 app.use('/public', express.static('public'));
