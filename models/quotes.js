@@ -17,3 +17,4 @@ const Quote = mongoose.model('Quote', quoteSchema)
 // EXPORT   
 module.exports = Quote
 
+

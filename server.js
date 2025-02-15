@@ -9,7 +9,11 @@ const methodOverride = require('method-override')
 const {render} = require('ejs')
 
 // IMPORT ROUTER 
-const quotesController = require('./controllers/quotes.js')
+// const quotesController = require('./controllers/quotes.js')
+// server.js
+const quotesController = require('./controllers/quotes')
+app.use('/', quotesController)  // Change from '/frenzies' to '/'
+
 
 // Redirect homepage to /frenzies
 app.get('/', (req, res) => {

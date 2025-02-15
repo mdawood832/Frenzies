@@ -12,13 +12,24 @@ const Quote = require('../models/quotes')
 
 
 // INDEX ROUTE  
-router.get('/' , (req, res) => {
-    Quote.find({} , (error, allQuotes) => {
-        res.render('index.ejs' , {
-            quotes: allQuotes
-        })
-    })
-})
+// router.get('/' , (req, res) => {
+//     Quote.find({} , (error, allQuotes) => {
+//         res.render('index.ejs' , {
+//             quotes: allQuotes
+//         })
+//     })
+// })
+// INDEX ROUTE  
+router.get('/' , async (req, res) => {
+    try {
+      const allQuotes = await Quote.find({})
+      res.render('index.ejs', { quotes: allQuotes || [] })
+    } catch (error) {
+      console.error('Error fetching quotes:', error)
+      res.status(500).send('Internal Server Error')
+    }
+  })
+  
 
 // ABOUT ROUTE 
 router.get('/about' , (req,res) => {
