@@ -11,7 +11,11 @@ const {render} = require('ejs')
 // IMPORT ROUTER 
 const quotesController = require('./controllers/quotes.js')
 
-
+// Redirect homepage to /frenzies
+app.get('/', (req, res) => {
+    res.redirect('/frenzies');
+  });
+  
 
 // MONGOOSE 
 const mongoose = require('mongoose');
