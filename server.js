@@ -22,7 +22,20 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
 
 // MONGOOSE CONNECT 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
+// mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tls: true,
+    tlsAllowInvalidCertificates: false,
+    tlsAllowInvalidHostnames: false,
+    ssl: true,
+    sslValidate: true,
+    connectTimeoutMS: 30000
+  })
+  .then(() => console.log('✅ Connected to MongoDB with TLS 1.2'))
+  .catch(err => console.error('❌ MongoDB connection error:', err));
+  
 mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
