@@ -17,7 +17,7 @@ RESTful routes with full CRUD. I deployed the app using Heroku.
 
 
 <h3> Depolyed App </h3>
-https://frenzies-deployed-app.herokuapp.com/frenzies
+https://frenzies.onrender.com/frenzies
 <br>
 <br>
 
@@ -25,7 +25,7 @@ https://frenzies-deployed-app.herokuapp.com/frenzies
 
 <h1> Gallery/Index Page </h1>
 <h3> Before & After of Wireframes </h3>
-https://frenzies-deployed-app.herokuapp.com/frenzies
+https://frenzies.onrender.com/frenzies
 <br>
 <br>
 <p float="left">
@@ -39,7 +39,7 @@ https://frenzies-deployed-app.herokuapp.com/frenzies
 
 <h1> Post Page  </h1>
 <h3> Before & After of Wireframes </h3>
-https://frenzies-deployed-app.herokuapp.com/frenzies/new
+https://frenzies.onrender.com/frenzies/new
 <br>
 <br>
 <p float="left">
@@ -52,7 +52,7 @@ https://frenzies-deployed-app.herokuapp.com/frenzies/new
 
 <h1> Show Page  </h1>
 <h3> Before & After of Wireframes </h3>
-https://frenzies-deployed-app.herokuapp.com/frenzies/630eab09981cf4cbc3da9fa4
+https://frenzies.onrender.com/frenzies/630eab09981cf4cbc3da9fa4
 <br>
 <br>
 <p float="left">
@@ -65,7 +65,7 @@ https://frenzies-deployed-app.herokuapp.com/frenzies/630eab09981cf4cbc3da9fa4
 
 <h1> About Page  </h1>
 <h3> Before & After of Wireframes </h3>
-https://frenzies-deployed-app.herokuapp.com/frenzies/about
+https://frenzies.onrender.com/frenzies/about
 <br>
 <br>
 <p float="left">
