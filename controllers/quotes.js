@@ -1,105 +1,109 @@
 const express = require('express')
 const router = express.Router()
-// const Quote = require('../models/quotes.js') 
-const Quote = require('../models/quotes') 
+const Quote = require('../models/quotes')
+const mongoose = require('mongoose')
 
-// const db = require('../models' )
-
-// #############################################################
-// ROUTES
-// #############################################################
+// controllers/quotes.js
+// const { Quote } = require('../models') // ✅ Use from index.js
 
 
 
-// INDEX ROUTE  
-// router.get('/' , (req, res) => {
-//     Quote.find({} , (error, allQuotes) => {
-//         res.render('index.ejs' , {
-//             quotes: allQuotes
-//         })
-//     })
-// })
-// INDEX ROUTE  
-router.get('/' , async (req, res) => {
+// ✅ Handle Favicon Request to Avoid Errors
+router.get('/favicon.ico', (req, res) => res.status(204).end())
+
+// ✅ INDEX ROUTE: Show All Quotes
+router.get('/frenzies', async (req, res) => {
+  try {
+    const allQuotes = await Quote.find({})
+    res.render('index.ejs', { quotes: allQuotes || [] })
+  } catch (error) {
+    console.error('Error fetching quotes:', error.message)
+    res.status(500).send('Internal Server Error')
+  }
+})
+
+
+  
+
+// 🟢 Static Routes First
+router.get('/about', (req, res) => {
+    res.render('about.ejs');
+  });
+
+
+
+// ✅ NEW ROUTE: Form to Create New Quote
+router.get('/new', (req, res) => {
+  res.render('new.ejs')
+})
+
+// ✅ CREATE ROUTE: Add New Quote
+router.post('/', async (req, res) => {
+  try {
+    const createdQuote = await Quote.create(req.body)
+    res.redirect('/frenzies')
+  } catch (error) {
+    console.error('Error creating quote:', error.message)
+    res.status(500).send('Internal Server Error')
+  }
+})
+
+// ✅ EDIT ROUTE: Form to Edit a Quote
+router.get('/:id/edit', async (req, res) => {
+  try {
+    const foundQuote = await Quote.findById(req.params.id)
+    if (!foundQuote) {
+      return res.status(404).send('Quote not found')
+    }
+    res.render('edit.ejs', { quote: foundQuote })
+  } catch (error) {
+    console.error('Error fetching quote for edit:', error.message)
+    res.status(500).send('Internal Server Error')
+  }
+})
+
+// ✅ UPDATE ROUTE: Update Quote Details
+router.put('/:id', async (req, res) => {
+  try {
+    await Quote.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    res.redirect('/frenzies')
+  } catch (error) {
+    console.error('Error updating quote:', error.message)
+    res.status(500).send('Internal Server Error')
+  }
+})
+
+// ✅ SHOW ROUTE: Show Individual Quote
+router.get('/:id', async (req, res) => {
+    const { id } = req.params
+  
+    // Validate ID Format (Avoid Crashes for Invalid IDs)
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      console.error('Invalid ID format:', id)
+      return res.status(400).send('Invalid quote ID')
+    }
+  
     try {
-      const allQuotes = await Quote.find({})
-      res.render('index.ejs', { quotes: allQuotes || [] })
+      const foundQuote = await Quote.findById(id)
+      if (!foundQuote) {
+        return res.status(404).send('Quote not found')
+      }
+      res.render('show.ejs', { quote: foundQuote })
     } catch (error) {
-      console.error('Error fetching quotes:', error)
+      console.error('Error fetching quote:', error.message)
       res.status(500).send('Internal Server Error')
     }
   })
-  
 
-// ABOUT ROUTE 
-router.get('/about' , (req,res) => {
-    res.render('about.ejs')
-}
-)
-
-// NEW ROUTE 
-router.get('/new' , (req,res) => {
-    res.render('new.ejs')
+// ✅ DELETE ROUTE: Remove Quote
+router.delete('/:id', async (req, res) => {
+  try {
+    await Quote.findByIdAndDelete(req.params.id)
+    res.redirect('/frenzies')
+  } catch (error) {
+    console.error('Error deleting quote:', error.message)
+    res.status(500).send('Internal Server Error')
+  }
 })
 
-
-
-// POST ROUTE 
-router.post('/', (req, res)=>{
-    Quote.create(req.body, (error, createdQuote)=>{
-        if (error){
-        	console.log(error);
-        	res.send(error);
-        }
-        else{
-	        // res.send(createdQuote);
-            res.redirect('/frenzies')
-        }
-    }
-)});
-
-// SHOW ROUTE 
-router.get('/:id', (req, res)=>{
-    Quote.findById(req.params.id, (err, foundQuote)=>{
-        res.render('show.ejs' , {
-            quote: foundQuote
-        })
-    });
-});
-
-// DELETE ROUTE 
-router.delete('/:id', (req, res)=>{
-    Quote.findByIdAndRemove(req.params.id , (err, data) => {
-        res.redirect('/frenzies')
-    })
-})
-
-// EDIT ROUTE 
-router.get('/:id/edit', (req, res)=>{
-    Quote.findById(req.params.id, (err, foundQuote)=>{
-        res.render(
-    		'edit.ejs',
-    		{
-    			quote:foundQuote
-    		}
-    	)
-    })
-})
-
-// PUT ROUTE 
-router.put('/:id', (req, res)=>{
-    Quote.findByIdAndUpdate(req.params.id ,req.body, (err, updatedModel) => {
-        if(err){
-            res.send(err)
-        }else{
-            
-            // console.log(req.params.id)
-            // console.log(req.body)
-            res.redirect('/frenzies')
-        }
-   
-    })
-})
-
-
-module.exports = router;
+module.exports = router

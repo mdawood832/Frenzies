@@ -16,10 +16,11 @@ app.use('/', quotesController)  // Change from '/frenzies' to '/'
 
 
 // Redirect homepage to /frenzies
-app.get('/', (req, res) => {
-    res.redirect('/frenzies');
-  });
+// app.get('/', (req, res) => {
+//     res.redirect('/frenzies');
+//   });
   
+
 
 // MONGOOSE 
 const mongoose = require('mongoose');
